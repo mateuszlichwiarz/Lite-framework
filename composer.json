@@ -1,0 +1,10 @@
+{
+    "name": "huawei/mvc",
+    "authors": [
+        {
+            "name": "Mateusz Lichwiarz",
+            "email": "mateusz.lichwiarz@gmail.com"
+        }
+    ],
+    "require": {}
+}
