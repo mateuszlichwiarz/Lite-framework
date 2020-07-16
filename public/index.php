@@ -2,14 +2,31 @@
 
 require_once '../vendor/autoload.php';
 
-$controller = isset($_GET['controller']) ? $_GET['controller'] : 'home';
-if(isset($_GET['params']))
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
-$dir = __DIR__ . '/../app/Controller/';
+$request = Request::createFromGlobals();
 
-if(file_exists($dir . $controller . '.php')){
-    require $dir . $controller . '.php';
-}else{
-    header("HTTP/1.0 404 Not Found");
-    echo '404';
+//$controller = $request->get('controller', 'home');
+
+$path = $request->getPathInfo();
+
+$response = new Response();
+
+$dir = __DIR__ . '/../app/Controller/%s.php';
+
+$map = [
+    '/home' => 'home',
+    '/list' => 'list',
+];
+
+if(isset($map[$path])) {
+    ob_start();
+    require sprintf($dir, $map[$path]);
+    $response->setContent(ob_get_clean());
+}else {
+    $response->setStatusCode(404);
+    $response->setContent("Sorry, we don't have what you looking for.");
 }
+
+$response->send();
