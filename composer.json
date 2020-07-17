@@ -10,7 +10,8 @@
         "monolog/monolog": "1.0.*",
         "phpunit/phpunit": "^9.2",
         "symfony/http-foundation": "^5.1",
-        "symfony/routing": "^5.1"
+        "symfony/routing": "^5.1",
+        "symfony/http-kernel": "^5.1"
     },
 
     "autoload": {
