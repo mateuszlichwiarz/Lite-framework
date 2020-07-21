@@ -66,7 +66,7 @@ class ComposerStaticInit59000a3f9fde52c223076cdb306368ab
         ),
         'app\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/app',
+            0 => __DIR__ . '/../..' . '/App',
         ),
         'Webmozart\\Assert\\' => 
         array (
