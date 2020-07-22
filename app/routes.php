@@ -5,7 +5,10 @@ use Symfony\Component\Routing\Route;
 
 $routes = new RouteCollection();
 
-$routes->add('home', new Route('/home/{page}/{name}', array('page' => '1', 'name' => 'MVC')));
-$routes->add('list', new Route('/list'));
+$routes->add('home', new Route('/home/{page}', [
+    'page' => '1',
+    'name' => 'MVC',
+    '_controller' => 'Home\Controller\Home::index',
+    ]));
 
 return $routes;
