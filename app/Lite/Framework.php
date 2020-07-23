@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Lite;
+namespace Lite;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;

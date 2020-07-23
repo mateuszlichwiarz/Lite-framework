@@ -22,10 +22,6 @@ class ComposerStaticInit59000a3f9fde52c223076cdb306368ab
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
-        'a' => 
-        array (
-            'app\\' => 4,
-        ),
         'W' => 
         array (
             'Webmozart\\Assert\\' => 17,
@@ -63,10 +59,6 @@ class ComposerStaticInit59000a3f9fde52c223076cdb306368ab
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-        ),
-        'app\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/App',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -136,6 +128,10 @@ class ComposerStaticInit59000a3f9fde52c223076cdb306368ab
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
         ),
+    );
+
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/../..' . '/app',
     );
 
     public static $prefixesPsr0 = array (
@@ -835,6 +831,7 @@ class ComposerStaticInit59000a3f9fde52c223076cdb306368ab
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit59000a3f9fde52c223076cdb306368ab::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit59000a3f9fde52c223076cdb306368ab::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit59000a3f9fde52c223076cdb306368ab::$fallbackDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit59000a3f9fde52c223076cdb306368ab::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit59000a3f9fde52c223076cdb306368ab::$classMap;
 

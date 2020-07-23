@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing;
 use Symfony\Component\HttpKernel;
 
-use app\Lite\Framework;
+use Lite\Framework;
 
 $request = Request::createFromGlobals();
 $routes = include __DIR__ . '/../app/routes.php';
