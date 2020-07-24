@@ -5,9 +5,9 @@ use Symfony\Component\Routing\Route;
 
 $routes = new RouteCollection();
 
-$routes->add('home', new Route('/home/{page}', [
+$routes->add('example', new Route('/example/{page}', [
     'page' => '1',
-    '_controller' => 'Home\Controller\HomeController::indexAction',
+    '_controller' => 'Example\Controller\ExampleController::indexAction',
     ]));
 
 return $routes;

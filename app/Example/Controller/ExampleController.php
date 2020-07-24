@@ -1,11 +1,11 @@
 <?php
 
-namespace Home\Controller;
+namespace Example\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class HomeController
+class ExampleController
 {
     public function indexAction(Request $request, $page)
     {
