@@ -11,10 +11,13 @@ class ExampleController
 {
     public function indexAction(Request $request, $page)
     {
-        $test0 = new Example;
+        $test0 = new Example();
         $test0->setName('Test0');
         $test0->setDesc('This_is_a_test_nr_0');
 
+        //TO DO
+        //Create class converting SQL to objects
+        
         $name = $test0->getName();
         $desc = $test0->getDesc();
 

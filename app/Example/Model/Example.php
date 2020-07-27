@@ -2,7 +2,7 @@
 
 namespace Example\Model;
 
-class Example
+class Example extends DataProvider
 {
     public $name;
     public $desc;
