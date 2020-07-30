@@ -2,31 +2,32 @@
 
 namespace Example\Model;
 
-class Example extends DataProvider
+class Example
 {
     public $name;
     public $desc;
 
-    public function setName(string $name): self
+    public static function fromState(array $state): Example
+    {
+        return new self(
+            $state['name'],
+            $state['desc']
+        );
+    }
+
+    public function __construct(string $name, string $desc)
     {
         $this->name = $name;
-
-        return $this;
-    }
-
-    public function getName(): ?string
-    {
-        return $this->name;
-    }
-
-    public function setDesc(string $desc): self
-    {
         $this->desc = $desc;
-
-        return $this;
     }
 
-    public function getDesc(): ?string
+    public function getName(): string
+    {
+        return $this->name;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+    }
+
+
+    public function getDesc(): string
     {
         return $this->desc;
     }
