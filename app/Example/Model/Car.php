@@ -2,23 +2,18 @@
 
 namespace Example\Model;
 
-class Example
+use Lite\Mapper;
+
+class Car
 {
-    public $name;
-    public $desc;
+    private $id;
+    private $name;
+    private $model;
+    private $cm3;
 
-    public static function fromState(array $state): Example
+    public function __construct()
     {
-        return new self(
-            $state['name'],
-            $state['desc']
-        );
-    }
-
-    public function __construct(string $name, string $desc)
-    {
-        $this->name = $name;
-        $this->desc = $desc;
+        
     }
 
     public function getName(): string
