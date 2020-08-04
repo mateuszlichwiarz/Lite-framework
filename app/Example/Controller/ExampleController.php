@@ -9,25 +9,25 @@ use Example\Model\Example;
 use Example\Model\ExampleMapper;
 use Example\Model\StorageAdapter;
 
+use Lite\DataManager\SQL;
+
 class ExampleController
 {
     public function indexAction(Request $request, $page)
     {
         $storage = new StorageAdapter([
             0 => ['name' => 'Mati',
-                'desc' => 'Great_power'],
+                  'desc' => 'Great_power']
         ]);
 
-        $mapper = new ExampleMapper($storage);
-        $smth = $mapper->findById(0);
-
-        $name = $smth->getName();
+        
+        $result = SQL::selectAll();
+        print_r($result);
 
         //TO DO
         //Create class converting SQL to objects
 
-        return new Response('Hello world! <br>'.
-        'name: '.$name
+        return new Response('Hello world! <br> chuj'
         );
     }
 }
